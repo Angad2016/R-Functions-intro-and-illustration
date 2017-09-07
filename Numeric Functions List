@@ -1,0 +1,113 @@
+
+ digit manipulations
+a <-19.753
+
+ Truncate 
+trunc(a)
+as.integer(a)
+
+ Ceiling
+ceiling(a)
+
+ flloor
+floor(a)
+
+ round
+round(a,2)  # round(a,0.01)
+round(a,1)
+round(a,0)
+
+ norm.vect <- rnorm(100000)
+ 
+ mean(norm.vect)
+ sd(norm.vect)
+ 
+ 
+ TO CHECK % of number between +/- 1 sigma or standard deviation
+ 
+ 
+ norm.vect.1 <-  norm.vect<=1 &  norm.vect >=-1
+ 
+ sum(norm.vect.1 )/length(norm.vect.1)
+ 
+ 
+ 
+ CHECK IF NEGATIVE VALUES IN A VECTOR
+ 
+ head(a)
+
+v1 <- a<0
+
+class(v1)
+table(v1)
+
+a.nega <- a[ v1]
+head(a.nega)
+
+a1 <- a[!a<0]
+head(a1)
+
+
+
+v2 <- a1<0
+
+table(v2)
+
+
+ TRANSFORMATION
+
+a.sqrt <- sqrt(a)
+
+table(is.na(a.sqrt))
+
+a1.sqrt <- sqrt(a1)
+
+tail(a.sqrt,20)
+
+df.a <- data.frame(a.sqrt )
+
+length(a.sqrt)
+
+miss.vect <- is.na(a.sqrt)
+
+
+head(miss.vect,150)
+table(miss.vect)
+
+# fining null or missing values
+a.missing <- a[miss.vect]
+head(a.missing)
+a.missing <- a.sqrt[ is.na(a.sqrt)]
+
+a.non.missing <- a.sqrt[ !is.na(a.sqrt)]
+
+length(a.non.missing)
+
+min(a.sqrt)
+min(a.non.missing)
+
+min.value <- min(a.sqrt,na.rm = T)
+
+# logarithmic
+a1.log <- log(a1)
+
+max(a1.log)
+
+min(a1.log)
+
+a2<-a1+1
+
+a2.log <- log(a2)
+
+min(a2.log)
+
+hist(a1)
+hist(a2.log)
+a.exp <- exp(a)
+
+hist(a.exp)
+
+log(10)
+exp(log(10))
+
+exp(1000)
