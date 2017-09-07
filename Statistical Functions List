@@ -1,0 +1,57 @@
+
+
+ total
+sum(a)
+length(a)
+sum(a)/length(a)
+
+ Mean, 
+mean(a)
+
+ Median
+median(a)
+
+skewness and kurtosis
+install.packages("moments")
+library(moments)
+skewness(a) # Skewness if negative then negatively skewed higher the value, higher is skewness
+kurtosis(a) # NOrmal distribution has value around 3 
+
+Distribution (if normal)
+norm <- rnorm(1000,50,20)
+
+hist(norm,
+     col="red")
+(if Binomial)
+bino <-rbinom(1000,5,0.85)
+hist(bino,
+     col="blue")
+table(bino)
+
+(If Poisson)
+pois <-rpois(1000,10)
+hist(pois,
+     col="orange")
+skewness(pois)
+kurtosis(pois)
+
+ Max, Min and Range
+max(a)
+min(a)
+range(a)
+
+ Standard deviation
+sd(a)
+# variance
+var(a)
+
+sqrt(var(a))
+# Quantile
+hist(a, breaks=40, col = "blue",
+     border = "white")
+quantile(a,0.5)
+quantile(a,0.25)
+quantile(a,0.75)
+
+quantile(a,0) # Min
+quantile(a,1) # Max
